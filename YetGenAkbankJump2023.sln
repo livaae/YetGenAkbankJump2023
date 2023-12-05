@@ -3,7 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YetGenAkbankJump2023", "YetGenAkbankJump2023\YetGenAkbankJump2023.csproj", "{CCC45FBD-9558-46D5-A44E-FD9862B3268A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lecture7", "Lecture7", "{C999545E-DB23-4846-B094-6A1BE1AF1355}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{BDDA3093-4078-41F6-96AB-B61C8A566D3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.Domain", "Lecture7\Core\Week7.Domain\Week7.Domain.csproj", "{4C26FB96-E1AE-4114-BDDF-9E7779E33C97}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructor", "Infrastructor", "{9D42041F-03AA-47EA-B2CC-6E0E34779F29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week7.Persitence", "Lecture7\Infrastructor\Week7.Persitence\Week7.Persitence.csproj", "{D949EDC7-F8D7-410D-B979-BAF68DE8E457}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{045FF26A-A14A-43F8-904A-784F15AE13C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lecture7.API", "Lecture7\Presentation\Lecture7_API\Lecture7.API.csproj", "{6A197DDE-2781-4448-A81B-375A1D4EEBF0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,13 +23,29 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CCC45FBD-9558-46D5-A44E-FD9862B3268A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CCC45FBD-9558-46D5-A44E-FD9862B3268A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CCC45FBD-9558-46D5-A44E-FD9862B3268A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CCC45FBD-9558-46D5-A44E-FD9862B3268A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C26FB96-E1AE-4114-BDDF-9E7779E33C97}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C26FB96-E1AE-4114-BDDF-9E7779E33C97}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C26FB96-E1AE-4114-BDDF-9E7779E33C97}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C26FB96-E1AE-4114-BDDF-9E7779E33C97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D949EDC7-F8D7-410D-B979-BAF68DE8E457}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D949EDC7-F8D7-410D-B979-BAF68DE8E457}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D949EDC7-F8D7-410D-B979-BAF68DE8E457}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D949EDC7-F8D7-410D-B979-BAF68DE8E457}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A197DDE-2781-4448-A81B-375A1D4EEBF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A197DDE-2781-4448-A81B-375A1D4EEBF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A197DDE-2781-4448-A81B-375A1D4EEBF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A197DDE-2781-4448-A81B-375A1D4EEBF0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BDDA3093-4078-41F6-96AB-B61C8A566D3C} = {C999545E-DB23-4846-B094-6A1BE1AF1355}
+		{4C26FB96-E1AE-4114-BDDF-9E7779E33C97} = {BDDA3093-4078-41F6-96AB-B61C8A566D3C}
+		{9D42041F-03AA-47EA-B2CC-6E0E34779F29} = {C999545E-DB23-4846-B094-6A1BE1AF1355}
+		{D949EDC7-F8D7-410D-B979-BAF68DE8E457} = {9D42041F-03AA-47EA-B2CC-6E0E34779F29}
+		{045FF26A-A14A-43F8-904A-784F15AE13C3} = {C999545E-DB23-4846-B094-6A1BE1AF1355}
+		{6A197DDE-2781-4448-A81B-375A1D4EEBF0} = {045FF26A-A14A-43F8-904A-784F15AE13C3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0E631B-E42D-4D8B-8A57-98CCB48A4372}
