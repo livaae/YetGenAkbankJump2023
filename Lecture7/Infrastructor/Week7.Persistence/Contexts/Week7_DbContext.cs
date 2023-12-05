@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Week7.Domain.Entities;
 
-namespace Week7.Persitence.Contexts
+namespace Week7.Persistence.Contexts
 {
     public class Week7_DbContext : DbContext
     {

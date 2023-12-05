@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Week7.Domain.Entities;
-using Week7.Persitence.Contexts;
+using Week7.Persistence.Contexts;
 
 namespace Lecture7.API.Controllers
 {
