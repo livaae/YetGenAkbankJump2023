@@ -1,37 +1,37 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Week7.Domain.Entities;
-using Week7.Persistence.Contexts;
+using Week_7_1.API.Models;
+using Week_7_1.Domain.Entities;
+using Week_7_1.Persistence.Contexts;
 
-namespace Lecture7.API.Controllers
+namespace Week_7_1.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly Week7_DbContext _context;
+        readonly Week_7_1DbContext _context;
 
-        public UsersController()
+        public UsersController(Week_7_1DbContext context)
         {
-            _context = new();
+            _context = context;
         }
 
-       [HttpGet("[action]")]
+        [HttpGet("[action]")]
         public IActionResult GetAll()
         {
             return Ok(_context.Users.ToList());
         }
 
-        
-
         [HttpPost("[action]")]
-        
         public IActionResult CreateUser([FromBody] CreateUserRequest createUserRequest)
         {
             User user = new()
             {
                 FirstName = createUserRequest.FirstName,
                 LastName = createUserRequest.LastName,
+                CreatedOn = DateTime.UtcNow,
+                CreatedByUserId =  "Liva"
             };
 
             _context.Users.Add(user);
