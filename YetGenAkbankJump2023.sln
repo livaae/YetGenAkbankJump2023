@@ -37,6 +37,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10_1.Persistence", "Wee
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10_1.API", "Week10_1\Presentation\Week10_1.API\Week10_1.API.csproj", "{C9E52EA7-6417-412D-A38B-3CBAAD75378F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Week10_1.Application", "Week10_1\Core\Week10_1.Application\Week10_1.Application.csproj", "{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{C9E52EA7-6417-412D-A38B-3CBAAD75378F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9E52EA7-6417-412D-A38B-3CBAAD75378F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9E52EA7-6417-412D-A38B-3CBAAD75378F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,6 +100,7 @@ Global
 		{3DFD492C-760A-41D6-B6E8-A47CC21ADD6C} = {1E0377AA-473B-40E7-803D-C5D7F03C77E1}
 		{2F94C159-278B-498C-A7A1-A9D0F04059B2} = {1E0377AA-473B-40E7-803D-C5D7F03C77E1}
 		{C9E52EA7-6417-412D-A38B-3CBAAD75378F} = {C635326E-2522-4A11-8708-96CFCD46AF1F}
+		{F60812A5-CE94-4E2D-9F0F-3AEE4E0D2B16} = {F8DD8291-F3DD-4975-B816-44AEA011E792}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EF0E631B-E42D-4D8B-8A57-98CCB48A4372}
