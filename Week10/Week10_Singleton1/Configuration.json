@@ -1,0 +1,12 @@
+﻿{
+  "ConnectionStrings": {
+    "ExampleDb": "ExampleConnectionString"
+  }
+}
+
+  //"Cloud": {
+  //  "Passwords": {
+  //    "Azure": "",
+  //    "AWS": ""
+  //  }
+  //}
