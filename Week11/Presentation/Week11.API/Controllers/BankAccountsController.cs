@@ -20,16 +20,34 @@ namespace Week11.API.Controllers
         public void SetDefaultUsersData()
         {
             List<BankAccount> people = new()
-            {
-                new BankAccount {Id=Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DA"), CreatedOn = DateTime.UtcNow,
-                    CreatedByUserId="1", FirstName="James",LastName="Smith",PhoneNumber="5007854959"},
+{
+    new BankAccount
+    {
+        Id = Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DA"),
+        CreatedOn = DateTime.UtcNow,
+        CreatedByUserId = "1",
+        FirstName = "James",
+        LastName = "Smith"
+    },
 
-                new BankAccount {Id=Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DB"), CreatedOn = DateTime.UtcNow,
-                    CreatedByUserId="1", FirstName="John",LastName="Doe",PhoneNumber="5856021548"},
+    new BankAccount
+    {
+        Id = Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DA"),
+        CreatedOn = DateTime.UtcNow,
+        CreatedByUserId = "1",
+        FirstName = "John",
+        LastName = "Johnson"
+    },
 
-                new BankAccount {Id=Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DC"), CreatedOn = DateTime.UtcNow,
-                    CreatedByUserId="1", FirstName="Alice",LastName="Johnson",PhoneNumber="5267854900"}
-            };
+    new BankAccount
+    {
+        Id = Guid.Parse("6B29FC40-CA47-1067-B31D-00DD010662DA"),
+        CreatedOn = DateTime.UtcNow,
+        CreatedByUserId = "1",
+        FirstName = "Alice",
+        LastName = "Williams"
+    }
+};
 
             _perfectAppDbContext.People.AddRange(people);
 
