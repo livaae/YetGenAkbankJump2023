@@ -1,3 +1,4 @@
+using FluentValidation.AspNetCore;
 using Week11.Persistence.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddControllersWithViews().AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<Program>()); 
 
 builder.Services.AddDbContext<PerfectAppDbContext>();
 
