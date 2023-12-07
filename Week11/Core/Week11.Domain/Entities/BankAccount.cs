@@ -12,6 +12,6 @@ namespace Week11.Domain.Entities
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
-        public string Balance { get; set; }
+        public decimal Balance { get; set; }
     }
 }

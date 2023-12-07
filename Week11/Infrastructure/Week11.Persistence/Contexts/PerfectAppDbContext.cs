@@ -14,7 +14,7 @@ namespace Week11.Persistence.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseInMemoryDatabase("PerfectApp");
+            optionsBuilder.UseInMemoryDatabase("PerfectApp"); 
         }
 
     }
