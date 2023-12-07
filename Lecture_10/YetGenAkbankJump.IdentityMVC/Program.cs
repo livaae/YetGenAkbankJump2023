@@ -1,11 +1,39 @@
 using Lecture_10.Domain.Identity;
 using Lecture_10.Persistence.Contexts;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddControllersWithViews();
+//builder.Services.AddControllersWithViews();
+// Add services to the container.
+builder.Services
+    .AddControllersWithViews()
+    .AddNToastNotifyToastr();
+
+builder.Services.AddOptions();
+builder.Services.AddHttpClient<ResendClient>();
+builder.Services.Configure<ResendClientOptions>(o =>
+{
+    o.ApiToken = "";
+});
+builder.Services.AddTransient<IResend, ResendClient>();
+
+var connectionString = builder.Configuration.GetSection("YetgenPostgreSQLDB").Value;
+
+builder.Services.AddDbContext<YetgenIdentityContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
+
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
+    options.UseNpgsql(connectionString);
+});
+
+
+
 builder.Services.AddSession();
 
 builder.Services.AddIdentity<User, Role>(options =>
