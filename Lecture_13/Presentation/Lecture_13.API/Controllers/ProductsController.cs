@@ -19,7 +19,12 @@ namespace Lecture_13.API.Controllers
         [HttpGet]
         public List<Product> GetAll()
         {
-            return _context.Products.ToList();
+           var products = _context.Products.Where(x => x.Price >25).ToList();
+            foreach (var product in products)
+            {
+                product.Price += 100;
+            }
+            _context.SaveChanges();
         }
     }
 }
