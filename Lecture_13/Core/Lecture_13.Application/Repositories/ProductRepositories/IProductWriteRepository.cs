@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Lecture_13.Application.Repositories.ProductRepositories
 {
-    public interface IProductReadRepository: IReadRepository<Product>
+    public interface IProductWriteRepository : IWriteRepository<Product>
     {
     }
 }
