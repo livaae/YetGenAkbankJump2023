@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Lecture_13.Persistence.DbContext;
+using Lecture_13.Persistence.Repositories.ProductRepositories;
 
 namespace Lecture_13.API.Controllers
 {
@@ -9,22 +10,22 @@ namespace Lecture_13.API.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly Lecture_13_DbContext _context;
+        //private readonly Lecture_13_DbContext _context;
 
-        public ProductsController(Lecture_13_DbContext context)
+        //public ProductsController(Lecture_13_DbContext context)
+        //{
+        //    _context = context;
+        //}
+        private readonly ProductReadRepository _productReadRepository;
+
+        public ProductsController(ProductReadRepository productReadRepository)
         {
-            _context = context;
+              _productReadRepository = productReadRepository;
         }
-
         [HttpGet]
         public List<Product> GetAll()
         {
-           var products = _context.Products.Where(x => x.Price >25).ToList();
-            foreach (var product in products)
-            {
-                product.Price += 100;
-            }
-            _context.SaveChanges();
+        return _productReadRepository.GetAll();
         }
     }
 }

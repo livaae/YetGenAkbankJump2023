@@ -11,6 +11,7 @@ namespace Lecture_13.Persistence.DbContext
     public class Lecture_13_DbContext: Microsoft.EntityFrameworkCore.DbContext
     {
         public DbSet<Product> Products { get; set; }
+        public DbSet<Customer> Customers { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
